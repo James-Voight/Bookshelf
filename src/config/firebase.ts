@@ -22,9 +22,17 @@ import {
   serverTimestamp 
 } from 'firebase/firestore';
 
+const requireEnv = (key: string) => {
+  const value = process.env[key];
+  if (!value) {
+    throw new Error(`Missing required environment variable: ${key}`);
+  }
+  return value;
+};
+
 // Firebase configuration - Replace with your own config from Firebase Console
 const firebaseConfig = {
-  apiKey: "AIzaSyAN1lybKS-T-jzr-4huOjKSsszTLP7Drro",
+  apiKey: requireEnv('EXPO_PUBLIC_FIREBASE_API_KEY'),
   authDomain: "bookshelf-8cc13.firebaseapp.com",
   projectId: "bookshelf-8cc13",
   storageBucket: "bookshelf-8cc13.firebasestorage.app",
