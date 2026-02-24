@@ -1,6 +1,6 @@
 # BookShelf - React Native Expo App
 
-A cross-platform book tracking app built with React Native and Expo.
+A cross-platform book tracking app built with React Native and Expo. To setup locally, add your env file information. free accounts can be used for everything except openAI which needs at least $5 deposited.
 
 ## Features
 
